@@ -2,17 +2,32 @@ import 'package:tarea_4_1_interfaces/models/product.dart';
 
 class Order {
   int table;
-  double total = 0.0;
-  List<Product> products;
+  Map<Product, int> products;
 
   Order(this.table, this.products);
 
-  void addProduct(Product product) {
-    products.add(product);
-    total+=product.price;
+  // Añadir un producto
+  void addProduct(Product product, int quantity) {
+    if (products.containsKey(product)) {
+      products[product] = products[product]! + quantity;
+    } else {
+      products[product] = quantity;
+    }
   }
+
+  // Eliminar un producto
   void deleteProduct(Product product) {
-    products.remove(product);
-    total-= product.price;
+    if (products.containsKey(product)){
+      products.remove(product);
+    } 
   }
+  // Obtener el importe total
+  double get total {
+    double sum = 0.0;
+    products.forEach((product, quantity){
+      sum += product.price * quantity;
+    });
+    return sum;
+  }
+  
 }
