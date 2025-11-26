@@ -12,6 +12,17 @@ class HomePage extends StatelessWidget {
         backgroundColor: Theme.of(context).colorScheme.inversePrimary,
         title: const Text('Bar de carretera'),
       ),
+      /*body: Consumer<OrderViewModel>(
+        builder: (context, viewmodel, child){
+          if(viewmodel.orders.isEmpty){
+            return const Center(
+              child: Text("No hay pedidos"),
+            );
+          }
+        }
+        
+        ,
+      ),*/
     );
   }
 }
