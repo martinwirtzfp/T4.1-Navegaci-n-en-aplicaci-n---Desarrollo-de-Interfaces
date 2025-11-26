@@ -1,7 +1,7 @@
 import 'package:tarea_4_1_interfaces/models/product.dart';
 
 class Order {
-  int table;
+  final int table;
   Map<Product, int> products;
 
   Order(this.table, this.products);
@@ -21,6 +21,7 @@ class Order {
       products.remove(product);
     } 
   }
+  
   // Obtener el importe total
   double get total {
     double sum = 0.0;
@@ -29,5 +30,13 @@ class Order {
     });
     return sum;
   }
-  
+
+  // Obtener cantidad total de productos
+  int get totalItems {
+    int count = 0;
+    products.forEach((product, quantity) {
+      count += quantity;
+    });
+    return count;
+  }
 }
