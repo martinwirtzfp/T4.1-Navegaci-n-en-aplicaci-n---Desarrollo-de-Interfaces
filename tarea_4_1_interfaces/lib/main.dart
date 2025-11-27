@@ -21,10 +21,10 @@ class MyApp extends StatelessWidget {
         final viewModel = OrderViewModel();
         // Cargar pedidos iniciales de ejemplo
         viewModel.loadInitialOrders();
-        return viewModel;
+        return viewModel;º
       },
       child: MaterialApp(
-        title: 'Gestión Bar',
+        title: 'Gestion pedidos Bar',
         debugShowCheckedModeBanner: false,
         theme: ThemeData(
           colorScheme: ColorScheme.fromSeed(seedColor: Colors.orange),
