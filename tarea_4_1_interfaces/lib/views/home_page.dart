@@ -56,7 +56,6 @@ class HomePage extends StatelessWidget {
                   subtitle: Text(
                     'Productos: ${order.totalItems} - Total: ${order.total.toStringAsFixed(2)}€',
                   ),
-                  trailing: const Icon(Icons.arrow_forward_ios),
                 ),
               );
             },
