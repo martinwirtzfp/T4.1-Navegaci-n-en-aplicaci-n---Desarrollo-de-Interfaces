@@ -21,7 +21,7 @@ class MyApp extends StatelessWidget {
         final viewModel = OrderViewModel();
         // Cargar pedidos iniciales de ejemplo
         viewModel.loadInitialOrders();
-        return viewModel;º
+        return viewModel;
       },
       child: MaterialApp(
         title: 'Gestion pedidos Bar',
